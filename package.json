@@ -1,0 +1,23 @@
+{
+  "name": "@federation-interservices-d-informatique/fiibot-template",
+  "version": "1.0.0",
+  "description": "Common template for FII bots",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/federation-interservices-d-informatique/fiibot-template.git"
+  },
+  "keywords": [
+    "fii",
+    "discord-bot"
+  ],
+  "author": "FII Dev team & contributors",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/federation-interservices-d-informatique/fiibot-template/issues"
+  },
+  "homepage": "https://github.com/federation-interservices-d-informatique/fiibot-template#readme"
+}
