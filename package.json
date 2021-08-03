@@ -9,7 +9,7 @@
     "test": "node --experimental-vm-modules node_modules/.bin/jest --passWithNoTests",
     "lint": "eslint . -c .eslintrc.cjs",
     "lint-fix": "eslint . -c .eslintrc.cjs --fix",
-    "format": "prettier 'src/**/*.ts' --write",
+    "format": "prettier 'src/**/*.ts' --write"
   },
   "repository": {
     "type": "git",
