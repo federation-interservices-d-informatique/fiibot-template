@@ -11,6 +11,12 @@ export default class PingCommand extends Command {
         });
     }
     async run(inter: CommandInteraction): Promise<void> {
-        inter.reply("Heeeello");
+        const base = Date.now();
+        await inter.reply("Mesure...");
+        await inter.editReply(
+            `${
+                Date.now() - base < 250 ? "🟢" : 500 < Date.now() ? "🔴" : "🟡"
+            } Pong! 🏓 en ${Date.now() - base}ms`
+        );
     }
 }
