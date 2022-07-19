@@ -6,6 +6,7 @@ RUN ["npm", "install"]
 RUN ["npx", "tsc"]
 RUN rm -rf node_modules
 RUN ["npm", "install", "--production"]
+
 FROM node:18-alpine3.14
 WORKDIR /usr/src/bot
 RUN adduser -D -H bot bot
