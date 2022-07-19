@@ -3,9 +3,10 @@ WORKDIR /usr/src/bot
 COPY package*.json ./
 
 RUN npm install
-RUN npm i -g nodemon
+RUN npm i -g tsc-watch
 
 COPY ./src ./
 COPY ./tsconfig.json ./
+COPY ./docker ./docker
 
-CMD nodemon --watch 'src/*' --ext 'ts' --exec 'npm run start-build'
+ENTRYPOINT /usr/src/bot/docker/entrypoint-dev.sh
