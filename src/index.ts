@@ -1,16 +1,20 @@
-import { fiiClient } from "@federation-interservices-d-informatique/fiibot-common";
-import { getDirname } from "./utils/getdirname.js";
+import { FiiClient } from "@federation-interservices-d-informatique/fiibot-common";
+import { GatewayIntentBits } from "discord.js";
 
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
-const client = new fiiClient(
+new FiiClient(
     {
-        intents: ["GUILDS"]
+        intents: [GatewayIntentBits.Guilds, GatewayIntentBits.MessageContent]
     },
     {
-        commandManagerSettings: {
-            commandsPath: [`${getDirname(import.meta.url)}/commands`]
+        managersSettings: {
+            interactionsManagerSettings: {
+                interactionsPaths: [],
+                includeDefaultInteractions: true
+            },
+            eventsManagerSettings: {
+                eventsPaths: []
+            }
         },
-        owners: process.env.OWNERS.split(",").map((o) => parseInt(o)),
         token: process.env.BOT_TOKEN
     }
 );
